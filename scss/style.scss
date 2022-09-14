@@ -1,3 +1,72 @@
+@import "variables";
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
-    background-color: rgb(0, 21, 255);
+  max-width: 1444px;
+  background-color: $bgColor;
+  margin: auto;
+}
+
+header {
+  height: 100px;
+  max-width: 1160px;
+  margin: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    > li {
+      margin-right: 40px;
+      a {
+        text-decoration: none;
+        @include fontBtnAndNav(16px, $mFontColor);
+      }
+    }
+
+    .logo a{
+      @include fontHeader(32px, $mFontColor);
+      sup {
+        @include fontHeader(14px, $mFontColor);
+      }
+    }
+  }
+  .block-messengers {
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      li {
+        width: 35px;
+        height: 35px;
+        margin-right: 12px;
+        background-color: $mFontColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+          fill: $bgColor;
+          height: 20px;
+        }
+      }
+      li:last-of-type {
+        margin-right: 0px;
+      }
+      li:hover {
+        background-color: $bgColor;
+        svg {
+          fill: $mFontColor;
+        }
+      }
+    }
+  }
 }

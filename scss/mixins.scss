@@ -1,0 +1,47 @@
+@mixin fontHeader($size: false, $color: false, $weight: false, $lh: false) {
+  font-family: "Audiowide", cursive;
+  @if $size {
+    font-size: $size;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}
+
+@mixin fontText($size: false, $color: false, $weight: false, $lh: false) {
+  font-family: "Inter", sans-serif;
+  @if $size {
+    font-size: $size;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}
+
+@mixin fontBtnAndNav($size: false, $color: false, $weight: false, $lh: false) {
+  font-family: "DM Mono", monospace;
+  @if $size {
+    font-size: $size;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}
