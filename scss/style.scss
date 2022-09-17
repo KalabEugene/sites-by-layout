@@ -6,10 +6,11 @@
   padding: 0;
 }
 body {
-  max-width: 1444px;
+  max-width: 1364px;
   background-color: $bgColor;
   margin: auto;
   padding: 0px 40px;
+  height: 100%;
 }
 
 header {
@@ -41,7 +42,7 @@ header {
       }
     }
   }
-  .block-messengers {
+  .messengers {
     ul {
       list-style-type: none;
       display: flex;
@@ -76,16 +77,16 @@ header {
   direction: row;
   align-items: center;
   margin-left: 30px;
-  .landing-header {
+  .landing__title {
     @include fontHeader(51px, $mFontColor, 400);
     margin-bottom: 45px;
   }
-  .lahding-describe {
+  .lahding__subtitle {
     max-width: 340px;
     @include fontText(18px, $mFontColor, 400);
     margin-bottom: 115px;
   }
-  .landing-button {
+  .landing__button {
     display: inline-block;
     background-color: $additionColor;
     padding: 17px 50px 27px 50px;
@@ -94,13 +95,13 @@ header {
       text-decoration: none;
     }
   }
-  .landing-img-wrap {
+  .landing__wrapimg {
     max-width: 870px;
     max-height: 653px;
-  }
-  img {
-    width: 100%;
-    height: auto;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 .description {
@@ -108,7 +109,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 115px;
+  margin: 115px 0px;
   .description-figurecaption-header1 {
     @include fontHeader(38px, $mFontColor, 400);
     margin-left: 65px;
@@ -133,10 +134,174 @@ header {
   .description-text-block-button {
     display: inline-block;
     border: 1px solid $additionColor;
-    margin: 10px 35px 16px 35px;
+    padding: 10px 35px 16px 35px;
     a {
       @include fontBtnAndNav(16px, $mFontColor, 400);
       text-decoration: none;
     }
+  }
+}
+.artists {
+  margin-bottom: 240px;
+  .artists__header {
+    height: 90px;
+    margin-bottom: 120px;
+    h1 {
+      @include fontHeader(80px, $mFontColor, 400);
+      text-align: center;
+    }
+  }
+  .artists__block {
+    max-width: 1160px;
+    max-height: 678px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    img {
+      max-width: 245px;
+      max-height: 245px;
+    }
+    figcaption {
+      @include fontBtnAndNav(18px, $mFontColor, 400);
+      text-align: center;
+      margin: 20px 0px 80px 0px;
+    }
+  }
+} /* udate count photos */
+.story {
+  max-width: 1160px;
+  max-height: 643px;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  .story__header {
+    @include fontHeader(38px, $mFontColor, 400);
+    text-align: center;
+    margin-bottom: 60px;
+    span {
+      color: #a8a8a8;
+    }
+  }
+  .story__block {
+    max-height: 600px;
+    display: flex;
+    flex-direction: row;
+    .story__menu {
+      max-width: 285px;
+      li {
+        display: block;
+        white-space: nowrap;
+        list-style-type: none;
+        @include fontBtnAndNav(16px, $mFontColor, 400);
+        padding: 25px 135px 30px 30px;
+      }
+      li:nth-of-type(1) {
+        color: $additionColor;
+        background-color: $bgBlocksColor;
+      }
+    }
+    .story__info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 60px;
+      background-color: $bgBlocksColor;
+      .story__image {
+        img {
+          max-width: 175px;
+          max-height: 255px;
+        }
+      }
+      .story__info__text {
+        overflow-x: hidden;
+        margin-left: 40px;
+        padding-top: 5px;
+        padding-right: 35px;
+        h1 {
+          @include fontBtnAndNav(21px, $additionColor, 400);
+          border-left: 5px solid currentColor;
+          padding-left: 20px;
+          margin-bottom: 28px;
+        }
+        h3 {
+          @include fontText(16px, $mFontColor, 400);
+        }
+      }
+    }
+  }
+}
+.stringimage__wrap {
+  max-width: 1444px;
+  max-height: 240px;
+  margin-bottom: 120px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.roadmap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .roadmap__title {
+    margin-bottom: 100px;
+    @include fontHeader(38px, $mFontColor, 400);
+  }
+  .roadmap__block {
+    width: 540px;
+    border: 1px solid $additionColor;
+    background-color: $bgBlocksColor;
+    .roadmap__header {
+      display: flex;
+      flex-direction: row;
+      padding: 12px;
+      border-bottom: inherit;
+      .roadmap__header__countbox {
+        width: 45px;
+        height: 45px;
+        border: 1px solid $additionColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include fontBtnAndNav(28px, $additionColor, 400);
+      }
+      .roadmap__header__title {
+        margin: 5px 0px 0px 15px;
+        h5 {
+          margin-bottom: 5px;
+          @include fontBtnAndNav(8px, $additionColor, 400);
+        }
+        h3 {
+          @include fontBtnAndNav(16px, $mFontColor, 400);
+        }
+      }
+    }
+    .roadmap__info {
+      @include fontText(11px, $mFontColor, 400);
+      padding: 30px 12px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .roadmap__info__text {
+        max-width: 280px;
+        :nth-child(1) {
+          margin: 0px 0px 25px 25px;
+        }
+        a {
+          margin-left: 5px;
+          text-decoration: none;
+          @include fontBtnAndNav(11px, $additionColor, 400)
+        }
+      }
+      img {
+        max-width: 130px;
+        min-height: 130px;
+      }
+    }
+  }
+  .roadmap__divider{
+    height: 50px;
+    border: 1px solid $additionColor;
+    margin: 50px 0px;
   }
 }
