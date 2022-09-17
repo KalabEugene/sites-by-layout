@@ -12,7 +12,6 @@ body {
   padding: 0px 40px;
   height: 100%;
 }
-
 header {
   height: 100px;
   max-width: 1160px;
@@ -42,32 +41,32 @@ header {
       }
     }
   }
-  .messengers {
-    ul {
-      list-style-type: none;
+}
+.messengers {
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    li {
+      width: 35px;
+      height: 35px;
+      margin-right: 12px;
+      background-color: $mFontColor;
       display: flex;
-      flex-direction: row;
-      li {
-        width: 35px;
-        height: 35px;
-        margin-right: 12px;
-        background-color: $mFontColor;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        i {
-          color: $bgColor;
-          height: 20px;
-        }
+      justify-content: center;
+      align-items: center;
+      i {
+        color: $bgColor;
+        height: 20px;
       }
-      li:last-of-type {
-        margin-right: 0px;
-      }
-      li:hover {
-        background-color: $bgColor;
-        i {
-          color: $mFontColor;
-        }
+    }
+    li:last-of-type {
+      margin-right: 0px;
+    }
+    li:hover {
+      background-color: $bgColor;
+      i {
+        color: $mFontColor;
       }
     }
   }
@@ -248,7 +247,6 @@ header {
     @include fontHeader(38px, $mFontColor, 400);
   }
   .roadmap__block {
-    width: 540px;
     border: 1px solid $additionColor;
     background-color: $bgBlocksColor;
     .roadmap__header {
@@ -282,6 +280,7 @@ header {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      width: 540px;
       .roadmap__info__text {
         max-width: 280px;
         :nth-child(1) {
@@ -290,7 +289,7 @@ header {
         a {
           margin-left: 5px;
           text-decoration: none;
-          @include fontBtnAndNav(11px, $additionColor, 400)
+          @include fontBtnAndNav(11px, $additionColor, 400);
         }
       }
       img {
@@ -299,9 +298,106 @@ header {
       }
     }
   }
-  .roadmap__divider{
+  .roadmap__divider {
     height: 50px;
     border: 1px solid $additionColor;
     margin: 50px 0px;
+  }
+}
+.partners {
+  max-width: 1160px;
+  max-height: 180px;
+  margin: 250px 0px;
+  .partners__title {
+    @include fontBtnAndNav(11px, $additionColor, 400);
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .partners__box {
+    @include fontHeader(30px, $mFontColor, 400);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: -85px;
+    h3 {
+      margin-bottom: 90px;
+      margin-right: 85px;
+    }
+  }
+}
+.faq {
+  max-width: 1160px;
+  max-height: 545px;
+  display: flex;
+  justify-content: space-between;
+  .faq__header {
+    max-width: 360px;
+    @include fontHeader(38px, $mFontColor, 400);
+    img {
+      max-width: 360px;
+      max-height: 360px;
+      margin-top: 50px;
+    }
+    :nth-child(2) {
+      color: #a8a8a8;
+    }
+  }
+  .faq__questions {
+    max-width: 580px;
+    .faq__list {
+      list-style-type: none;
+      li {
+        @include fontBtnAndNav(16px, $mFontColor, 400);
+        padding: 24px 30px;
+        background-color: $bgBlocksColor;
+      }
+      .faq__question__description {
+        @include fontText(12px, $mFontColor, 400);
+        margin-top: 24px;
+      }
+    }
+  }
+}
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    margin: 95px 0px 130px 0px;
+    @include fontHeader(79px, $mFontColor, 400);
+    text-align: center;
+  }
+  &__container {
+    max-width: 1160px;
+    max-height: 560px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-right: -50px;
+    .team__person {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 50px;
+      img {
+        max-width: 320px;
+        max-height: 320px;
+      }
+      .team__person__name {
+        margin: 18px 0px;
+        @include fontBtnAndNav(21px, $mFontColor, 400);
+      }
+      .team__person__career {
+        margin-bottom: 18px;
+        @include fontBtnAndNav(12px, $additionColor, 400);
+      }
+      .team__person__description {
+        max-width: 238px;
+        margin-top: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        @include fontText(12px, $mFontColor, 400);
+      }
+    }
   }
 }
