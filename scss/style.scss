@@ -9,7 +9,7 @@ body {
   max-width: 1364px;
   background-color: $bgColor;
   margin: auto;
-  padding: 0px 40px;
+  padding: 0px $mainPadding;
   height: 100%;
 }
 header {
@@ -30,14 +30,14 @@ header {
       margin-right: 40px;
       a {
         text-decoration: none;
-        @include fontBtnAndNav(16px, $mFontColor);
+        @include fontBtnAndNav($sizeFontSmallText, $mFontColor);
       }
     }
 
     .logo a {
-      @include fontHeader(32px, $mFontColor);
+      @include fontHeader($sizeFontHeader, $mFontColor);
       sup {
-        @include fontHeader(14px, $mFontColor);
+        @include fontHeader($sizeFontHeader / 2.5, $mFontColor);
       }
     }
   }
@@ -77,12 +77,12 @@ header {
   align-items: center;
   margin-left: 30px;
   .landing__title {
-    @include fontHeader(51px, $mFontColor, 400);
+    @include fontHeader($sizeFontHeader + 10%, $mFontColor, 400);
     margin-bottom: 45px;
   }
   .lahding__subtitle {
     max-width: 340px;
-    @include fontText(18px, $mFontColor, 400);
+    @include fontText($sizeFontSmallText, $mFontColor, 400);
     margin-bottom: 115px;
   }
   .landing__button {
@@ -90,7 +90,7 @@ header {
     background-color: $additionColor;
     padding: 17px 50px 27px 50px;
     a {
-      @include fontBtnAndNav(18px, $bgColor, 400);
+      @include fontBtnAndNav($sizeFontSmallText, $bgColor, 400);
       text-decoration: none;
     }
   }
@@ -110,23 +110,23 @@ header {
   justify-content: space-between;
   margin: 115px 0px;
   .description-figurecaption-header1 {
-    @include fontHeader(38px, $mFontColor, 400);
+    @include fontHeader($mainPadding, $mFontColor, 400);
     margin-left: 65px;
   }
   .description-figurecaption-header2 {
-    @include fontHeader(38px, #a8a8a8, 400);
+    @include fontHeader($mainPadding, $grayFontColor, 400);
     margin: 0px 0px 40px 65px;
   }
   .description-text-block {
     max-width: 580px;
     .description-text-block-header {
-      @include fontBtnAndNav(21px, $additionColor, 400);
+      @include fontBtnAndNav($sizeFontTitle, $additionColor, 400);
       border-left: 5px solid currentColor;
       padding-left: 20px;
       margin-bottom: 32px;
     }
     .description-text-block-text {
-      @include fontText(16px, $mFontColor, 400);
+      @include fontText($sizeFontSmallText, $mFontColor, 400);
       margin-bottom: 20px;
     }
   }
@@ -135,7 +135,7 @@ header {
     border: 1px solid $additionColor;
     padding: 10px 35px 16px 35px;
     a {
-      @include fontBtnAndNav(16px, $mFontColor, 400);
+      @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
       text-decoration: none;
     }
   }
@@ -162,7 +162,7 @@ header {
       max-height: 245px;
     }
     figcaption {
-      @include fontBtnAndNav(18px, $mFontColor, 400);
+      @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
       text-align: center;
       margin: 20px 0px 80px 0px;
     }
@@ -174,11 +174,11 @@ header {
   margin-top: 120px;
   margin-bottom: 120px;
   .story__header {
-    @include fontHeader(38px, $mFontColor, 400);
+    @include fontHeader($sizeFontHeader, $mFontColor, 400);
     text-align: center;
     margin-bottom: 60px;
     span {
-      color: #a8a8a8;
+      color: $grayFontColor;
     }
   }
   .story__block {
@@ -191,7 +191,7 @@ header {
         display: block;
         white-space: nowrap;
         list-style-type: none;
-        @include fontBtnAndNav(16px, $mFontColor, 400);
+        @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
         padding: 25px 135px 30px 30px;
       }
       li:nth-of-type(1) {
@@ -217,13 +217,13 @@ header {
         padding-top: 5px;
         padding-right: 35px;
         h1 {
-          @include fontBtnAndNav(21px, $additionColor, 400);
+          @include fontBtnAndNav($sizeFontTitle, $additionColor, 400);
           border-left: 5px solid currentColor;
           padding-left: 20px;
           margin-bottom: 28px;
         }
         h3 {
-          @include fontText(16px, $mFontColor, 400);
+          @include fontText($sizeFontSmallText, $mFontColor, 400);
         }
       }
     }
@@ -232,6 +232,8 @@ header {
 .stringimage__wrap {
   max-width: 1444px;
   max-height: 240px;
+  margin-left: -$mainPadding;
+  margin-right: -$mainPadding;
   margin-bottom: 120px;
   img {
     width: 100%;
@@ -244,7 +246,7 @@ header {
   align-items: center;
   .roadmap__title {
     margin-bottom: 100px;
-    @include fontHeader(38px, $mFontColor, 400);
+    @include fontHeader($sizeFontHeader, $mFontColor, 400);
   }
   .roadmap__block {
     border: 1px solid $additionColor;
@@ -261,21 +263,21 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        @include fontBtnAndNav(28px, $additionColor, 400);
+        @include fontBtnAndNav($sizeFontHeader / 1.5, $additionColor, 400);
       }
       .roadmap__header__title {
         margin: 5px 0px 0px 15px;
         h5 {
           margin-bottom: 5px;
-          @include fontBtnAndNav(8px, $additionColor, 400);
+          @include fontBtnAndNav($sizeFontVerySmallText, $additionColor, 400);
         }
         h3 {
-          @include fontBtnAndNav(16px, $mFontColor, 400);
+          @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
         }
       }
     }
     .roadmap__info {
-      @include fontText(11px, $mFontColor, 400);
+      @include fontText($sizeFontVerySmallText, $mFontColor, 400);
       padding: 30px 12px;
       display: flex;
       flex-direction: row;
@@ -289,7 +291,7 @@ header {
         a {
           margin-left: 5px;
           text-decoration: none;
-          @include fontBtnAndNav(11px, $additionColor, 400);
+          @include fontBtnAndNav($sizeFontVerySmallText, $additionColor, 400);
         }
       }
       img {
@@ -309,12 +311,12 @@ header {
   max-height: 180px;
   margin: 250px 0px;
   .partners__title {
-    @include fontBtnAndNav(11px, $additionColor, 400);
+    @include fontBtnAndNav($sizeFontVerySmallText, $additionColor, 400);
     text-align: center;
     margin-bottom: 60px;
   }
   .partners__box {
-    @include fontHeader(30px, $mFontColor, 400);
+    @include fontHeader($sizeFontHeader - 10%, $mFontColor, 400);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -332,14 +334,14 @@ header {
   justify-content: space-between;
   .faq__header {
     max-width: 360px;
-    @include fontHeader(38px, $mFontColor, 400);
+    @include fontHeader($sizeFontHeader, $mFontColor, 400);
     img {
       max-width: 360px;
       max-height: 360px;
       margin-top: 50px;
     }
     :nth-child(2) {
-      color: #a8a8a8;
+      color: $grayFontColor;
     }
   }
   .faq__questions {
@@ -347,12 +349,12 @@ header {
     .faq__list {
       list-style-type: none;
       li {
-        @include fontBtnAndNav(16px, $mFontColor, 400);
+        @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
         padding: 24px 30px;
         background-color: $bgBlocksColor;
       }
       .faq__question__description {
-        @include fontText(12px, $mFontColor, 400);
+        @include fontText($sizeFontVerySmallText, $mFontColor, 400);
         margin-top: 24px;
       }
     }
@@ -364,7 +366,7 @@ header {
   align-items: center;
   &__title {
     margin: 95px 0px 130px 0px;
-    @include fontHeader(79px, $mFontColor, 400);
+    @include fontHeader($sizeFontHeader * 2, $mFontColor, 400);
     text-align: center;
   }
   &__container {
@@ -385,19 +387,112 @@ header {
       }
       .team__person__name {
         margin: 18px 0px;
-        @include fontBtnAndNav(21px, $mFontColor, 400);
+        @include fontBtnAndNav($sizeFontTitle, $mFontColor, 400);
       }
       .team__person__career {
         margin-bottom: 18px;
-        @include fontBtnAndNav(12px, $additionColor, 400);
+        @include fontBtnAndNav($sizeFontVerySmallText, $additionColor, 400);
       }
       .team__person__description {
         max-width: 238px;
         margin-top: 20px;
         text-align: center;
         margin-bottom: 20px;
-        @include fontText(12px, $mFontColor, 400);
+        @include fontText($sizeFontVerySmallText, $mFontColor, 400);
       }
+    }
+  }
+}
+.join {
+  margin: 250px 0px 150px 0px;
+  &__container {
+    margin: 0px auto;
+    max-width: 1160px;
+    max-height: 590px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__header {
+    max-width: 350px;
+    max-height: 350px;
+    .join__title {
+      @include fontHeader($sizeFontHeader, $mFontColor, 400);
+      margin: 30px 0px;
+      :last-of-type {
+        color: $additionColor;
+      }
+    }
+    .join__subtitle {
+      margin-bottom: 30px;
+      @include fontText($sizeFontSmallText, $mFontColor, 400);
+    }
+    .join__btn {
+      text-decoration: none;
+      @include fontBtnAndNav($sizeFontSmallText, $bgColor, 400);
+      padding: 8px 30px;
+      background-color: $additionColor;
+      i {
+        margin-right: 8px;
+      }
+    }
+  }
+  &__imgwrap {
+    max-width: 584px;
+    max-height: 584px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+footer {
+  margin: 0px -$mainPadding;
+  max-width: 100%;
+  height: 198px;
+  background-color: $bdFooterColor;
+  padding: 100px 40px 50px 40px;
+  .container {
+    margin: 0px auto;
+    max-width: 1160px;
+    height: 137px;
+    display: flex;
+    justify-content: space-between;
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      > li {
+        margin-right: 20px;
+      }
+    }
+    .col1 {
+      display: flex;
+      @include fontHeader($sizeFontTitle, $mFontColor, 400);
+      sup {
+        @include fontHeader($sizeFontTitle / 2.5, $mFontColor, 400);
+      }
+      li:last-child {
+        @include fontBtnAndNav($sizeFontVerySmallText, $mFontColor, 400);
+      }
+    }
+    .col2,
+    .col3 {
+      display: flex;
+      @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
+    }
+    .col4 {
+      ul > li {
+        margin-bottom: 30px;
+      }
+      @include fontBtnAndNav($sizeFontVerySmallText, $mFontColor, 400);
+    }
+    .col5 > ul {
+      li {
+        margin-right: 12px;
+      }
+      flex-direction: row;
     }
   }
 }
