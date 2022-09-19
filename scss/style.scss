@@ -77,8 +77,8 @@ header {
   align-items: center;
   margin-left: 30px;
   .landing__title {
-    @include fontHeader($sizeFontHeader + 10%, $mFontColor, 400);
-    margin-bottom: 45px;
+    @include fontHeader($sizeFontHeader * 1.3, $mFontColor, 400);
+    margin: 45px 0px;
   }
   .lahding__subtitle {
     max-width: 340px;
@@ -119,6 +119,7 @@ header {
   }
   .description-text-block {
     max-width: 580px;
+    margin-left: 20px;
     .description-text-block-header {
       @include fontBtnAndNav($sizeFontTitle, $additionColor, 400);
       border-left: 5px solid currentColor;
@@ -141,22 +142,25 @@ header {
   }
 }
 .artists {
-  margin-bottom: 240px;
+  margin-bottom: 160px;
   .artists__header {
     height: 90px;
     margin-bottom: 120px;
     h1 {
-      @include fontHeader(80px, $mFontColor, 400);
+      @include fontHeader($sizeFontHeader * 2, $mFontColor, 400);
       text-align: center;
     }
   }
   .artists__block {
     max-width: 1160px;
-    max-height: 678px;
+    max-height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    figure {
+      margin: 0px 10px;
+    }
     img {
       max-width: 245px;
       max-height: 245px;
@@ -249,6 +253,7 @@ header {
     @include fontHeader($sizeFontHeader, $mFontColor, 400);
   }
   .roadmap__block {
+    max-width: 100%;
     border: 1px solid $additionColor;
     background-color: $bgBlocksColor;
     .roadmap__header {
@@ -277,6 +282,7 @@ header {
       }
     }
     .roadmap__info {
+      max-width: 100%;
       @include fontText($sizeFontVerySmallText, $mFontColor, 400);
       padding: 30px 12px;
       display: flex;
@@ -308,15 +314,16 @@ header {
 }
 .partners {
   max-width: 1160px;
-  max-height: 180px;
+  max-height: 100%;
   margin: 250px 0px;
   .partners__title {
-    @include fontBtnAndNav($sizeFontVerySmallText, $additionColor, 400);
+    @include fontBtnAndNav($sizeFontSmallText, $additionColor, 400);
     text-align: center;
     margin-bottom: 60px;
   }
   .partners__box {
-    @include fontHeader($sizeFontHeader - 10%, $mFontColor, 400);
+    max-height: 100%;
+    @include fontHeader($sizeFontHeader / 1.3, $mFontColor, 400);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -334,6 +341,7 @@ header {
   justify-content: space-between;
   .faq__header {
     max-width: 360px;
+    margin-right: 20px;
     @include fontHeader($sizeFontHeader, $mFontColor, 400);
     img {
       max-width: 360px;
@@ -371,7 +379,7 @@ header {
   }
   &__container {
     max-width: 1160px;
-    max-height: 560px;
+    max-height: 100%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -447,11 +455,11 @@ header {
   }
 }
 footer {
-  margin: 0px -$mainPadding;
+  margin: 0px (-$mainPadding);
   max-width: 100%;
   height: 198px;
   background-color: $bdFooterColor;
-  padding: 100px 40px 50px 40px;
+  padding: 100px 40px 35px 40px;
   .container {
     margin: 0px auto;
     max-width: 1160px;
@@ -493,6 +501,334 @@ footer {
         margin-right: 12px;
       }
       flex-direction: row;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  $sizeFontHeader: 28px;
+  $sizeFontTitle: 15px;
+  $sizeFontSmallText: 12px;
+  $sizeFontVerySmallText: 7px;
+  $mainPadding: 30px;
+
+  body {
+    padding: 0px $mainPadding;
+  }
+  header {
+    height: 70px;
+    nav ul {
+      > li {
+        a {
+          @include fontBtnAndNav($sizeFontSmallText, $mFontColor);
+        }
+      }
+      .logo a {
+        @include fontHeader($sizeFontHeader, $mFontColor);
+        sup {
+          @include fontHeader($sizeFontHeader / 2.5, $mFontColor);
+        }
+      }
+    }
+  }
+  .messengers {
+    ul {
+      li {
+        width: 30px;
+        height: 30px;
+        i {
+          height: 14px;
+        }
+      }
+    }
+  }
+  .landing {
+    .landing__title {
+      @include fontHeader($sizeFontHeader * 1.3, $mFontColor, 400);
+      margin: 30px 0px;
+    }
+    .lahding__subtitle {
+      @include fontText($sizeFontSmallText, $mFontColor, 400);
+      margin-bottom: 80px;
+    }
+    .landing__button {
+      display: inline-block;
+      background-color: $additionColor;
+      padding: 12px 35px 19px 35px;
+      a {
+        @include fontBtnAndNav($sizeFontSmallText, $bgColor, 400);
+      }
+    }
+  }
+  .description {
+    margin: 80px 0px;
+    img {
+      max-width: 250px;
+    }
+    .description-figurecaption-header1 {
+      @include fontHeader($mainPadding, $mFontColor, 400);
+      margin-left: 45px;
+    }
+    .description-figurecaption-header2 {
+      @include fontHeader($mainPadding, $grayFontColor, 400);
+      margin: 0px 0px 28px 45px;
+    }
+    .description-text-block {
+      .description-text-block-header {
+        @include fontBtnAndNav($sizeFontTitle, $additionColor, 400);
+      }
+      .description-text-block-text {
+        @include fontText($sizeFontSmallText, $mFontColor, 400);
+      }
+    }
+    .description-text-block-button {
+      padding: 7px 25px 12px 25px;
+      a {
+        @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
+      }
+    }
+  }
+  .artists {
+    margin-bottom: 115px;
+    .artists__header {
+      height: 65px;
+      margin-bottom: 85px;
+      h1 {
+        @include fontHeader($sizeFontHeader * 2, $mFontColor, 400);
+      }
+    }
+    .artists__block {
+      figure {
+        margin: 0px 10px;
+      }
+      img {
+        max-width: 200px;
+        max-height: 200px;
+      }
+      figcaption {
+        @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
+        margin: 14px 0px 55px 0px;
+      }
+    }
+  }
+  .story {
+    max-width: 800px;
+    margin: 85px 0px;
+    .story__header {
+      @include fontHeader($sizeFontHeader, $mFontColor, 400);
+      margin-bottom: 45px;
+    }
+    .story__block {
+      max-height: 400px;
+      .story__menu {
+        max-width: 200px;
+        li {
+          @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
+          padding: 18px 95px 20px 20px;
+        }
+      }
+      .story__info {
+        padding: 40px;
+
+        .story__image {
+          img {
+            max-width: 125px;
+            max-height: auto;
+          }
+        }
+        .story__info__text {
+          h1 {
+            @include fontBtnAndNav($sizeFontTitle, $additionColor, 400);
+            margin-bottom: 20px;
+          }
+          h3 {
+            @include fontText($sizeFontSmallText, $mFontColor, 400);
+          }
+        }
+      }
+    }
+  }
+  .roadmap {
+    .roadmap__title {
+      margin-bottom: 70px;
+      @include fontHeader($sizeFontHeader, $mFontColor, 400);
+    }
+    .roadmap__block {
+      .roadmap__header {
+        padding: 12px;
+        .roadmap__header__countbox {
+          width: 42px;
+          height: 42px;
+          @include fontBtnAndNav($sizeFontHeader / 1.5, $additionColor, 400);
+        }
+        .roadmap__header__title {
+          margin: 5px 0px 0px 15px;
+          h5 {
+            @include fontBtnAndNav($sizeFontVerySmallText, $additionColor, 400);
+          }
+          h3 {
+            @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
+          }
+        }
+      }
+      .roadmap__info {
+        max-width: 400px;
+        @include fontText($sizeFontVerySmallText, $mFontColor, 400);
+        padding: 21px 9px;
+        .roadmap__info__text {
+          max-width: 200px;
+          :nth-child(1) {
+            margin: 0px 0px 18px 18px;
+          }
+          a {
+            @include fontBtnAndNav($sizeFontVerySmallText, $additionColor, 400);
+          }
+        }
+        img {
+          max-width: 90px;
+          min-height: 90px;
+        }
+      }
+    }
+    .roadmap__divider {
+      height: 35px;
+      margin: 35px 0px;
+    }
+  }
+  .partners {
+    margin: 175px 0px;
+    .partners__title {
+      @include fontBtnAndNav($sizeFontSmallText, $additionColor, 400);
+      margin-bottom: 45px;
+    }
+    .partners__box {
+      @include fontHeader($sizeFontHeader / 1.3, $mFontColor, 400);
+      margin-right: -45px;
+      h3 {
+        margin: 0px 65px 65px 0px;
+      }
+    }
+  }
+  .faq {
+    max-width: 800px;
+    .faq__header {
+      max-width: 360px;
+      @include fontHeader($sizeFontHeader, $mFontColor, 400);
+      img {
+        max-width: 250px;
+        margin-top: 40px;
+      }
+    }
+    .faq__questions {
+      max-width: 400px;
+      .faq__list {
+        list-style-type: none;
+        li {
+          @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
+          padding: 17px 21px;
+        }
+        .faq__question__description {
+          @include fontText($sizeFontVerySmallText, $mFontColor, 400);
+          margin-top: 18px;
+        }
+      }
+    }
+  }
+  .team {
+    &__title {
+      margin: 65px 0px 90px 0px;
+      @include fontHeader($sizeFontHeader * 2, $mFontColor, 400);
+    }
+    &__container {
+      margin-right: -35px;
+      .team__person {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 35px;
+        img {
+          max-width: 225px;
+          max-height: 225px;
+        }
+        .team__person__name {
+          margin: 13px 0px;
+          @include fontBtnAndNav($sizeFontTitle, $mFontColor, 400);
+        }
+        .team__person__career {
+          margin-bottom: 13px;
+          @include fontBtnAndNav($sizeFontVerySmallText, $additionColor, 400);
+        }
+        .team__person__description {
+          max-width: 170px;
+          margin: 14px 0px;
+          text-align: center;
+          @include fontText($sizeFontVerySmallText, $mFontColor, 400);
+        }
+      }
+    }
+  }
+  .join {
+    margin: 175px 0px 100px 0px;
+    &__container {
+      max-width: 800px;
+    }
+    &__header {
+      max-width: 245px;
+      max-height: 245px;
+      .join__title {
+        @include fontHeader($sizeFontHeader, $mFontColor, 400);
+        margin: 21px 0px;
+      }
+      .join__subtitle {
+        margin-bottom: 21px;
+        @include fontText($sizeFontSmallText, $mFontColor, 400);
+      }
+      .join__btn {
+        @include fontBtnAndNav($sizeFontSmallText, $bgColor, 400);
+        padding: 6px 21px;
+        i {
+          margin-right: 6px;
+        }
+      }
+    }
+    &__imgwrap {
+      max-width: 400px;
+      max-height: 400px;
+    }
+  }
+  footer {
+    margin: 0px (-$mainPadding);
+    padding: 70px 28px 25px 28px;
+    .container {
+      max-width: 800px;
+      ul {
+        > li {
+          margin-right: 14px;
+        }
+      }
+      .col1 {
+        @include fontHeader($sizeFontTitle, $mFontColor, 400);
+        sup {
+          @include fontHeader($sizeFontTitle / 2.5, $mFontColor, 400);
+        }
+        li:last-child {
+          @include fontBtnAndNav($sizeFontVerySmallText, $mFontColor, 400);
+        }
+      }
+      .col2,
+      .col3 {
+        @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
+      }
+      .col4 {
+        ul > li {
+          margin-bottom: 21px;
+        }
+        @include fontBtnAndNav($sizeFontVerySmallText, $mFontColor, 400);
+      }
+      .col5 > ul {
+        li {
+          margin-right: 9px;
+        }
+      }
     }
   }
 }
