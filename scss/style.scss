@@ -171,7 +171,7 @@ header {
       margin: 20px 0px 80px 0px;
     }
   }
-} /* udate count photos */
+}
 .story {
   max-width: 1160px;
   max-height: 643px;
@@ -457,9 +457,9 @@ header {
 footer {
   margin: 0px (-$mainPadding);
   max-width: 100%;
-  height: 198px;
+  max-height: 198px;
   background-color: $bdFooterColor;
-  padding: 100px 40px 35px 40px;
+  padding: 100px 40px;
   .container {
     margin: 0px auto;
     max-width: 1160px;
@@ -797,9 +797,10 @@ footer {
   }
   footer {
     margin: 0px (-$mainPadding);
-    padding: 70px 28px 25px 28px;
+    padding: 70px 28px;
     .container {
       max-width: 800px;
+      height: 95px;
       ul {
         > li {
           margin-right: 14px;
@@ -827,6 +828,338 @@ footer {
       .col5 > ul {
         li {
           margin-right: 9px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  $sizeFontHeader: 20px;
+  $sizeFontTitle: 11px;
+  $sizeFontSmallText: 8px;
+  $sizeFontVerySmallText: 5px;
+  $mainPadding: 16px;
+
+  body {
+    padding: 0px $mainPadding;
+  }
+  header {
+    height: 50px;
+    nav ul {
+      > li {
+        margin-right: 15px;
+        a {
+          @include fontBtnAndNav($sizeFontSmallText, $mFontColor);
+        }
+      }
+      .logo a {
+        @include fontHeader($sizeFontHeader, $mFontColor);
+        sup {
+          @include fontHeader($sizeFontHeader / 2.5, $mFontColor);
+        }
+      }
+    }
+  }
+  .messengers {
+    ul {
+      li {
+        margin-right: 6px;
+        width: 21px;
+        height: 21px;
+        i {
+          height: 5px;
+        }
+      }
+    }
+  }
+  .landing {
+    .landing__title {
+      @include fontHeader($sizeFontHeader * 1.3, $mFontColor, 400);
+      margin: 21px 0px;
+    }
+    .lahding__subtitle {
+      @include fontText($sizeFontSmallText, $mFontColor, 400);
+      margin-bottom: 60px;
+    }
+    .landing__button {
+      display: inline-block;
+      background-color: $additionColor;
+      padding: 9px 25px 14px 25px;
+      a {
+        @include fontBtnAndNav($sizeFontSmallText, $bgColor, 400);
+      }
+    }
+  }
+  .description {
+    margin: 56px 0px;
+    img {
+      max-width: 175px;
+    }
+    .description-figurecaption-header1 {
+      @include fontHeader($mainPadding, $mFontColor, 400);
+      margin-left: 30px;
+    }
+    .description-figurecaption-header2 {
+      @include fontHeader($mainPadding, $grayFontColor, 400);
+      margin: 0px 0px 20px 30px;
+    }
+    .description-text-block {
+      .description-text-block-header {
+        @include fontBtnAndNav($sizeFontTitle, $additionColor, 400);
+      }
+      .description-text-block-text {
+        @include fontText($sizeFontSmallText, $mFontColor, 400);
+      }
+    }
+    .description-text-block-button {
+      padding: 5px 18px 9px 18px;
+      a {
+        @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
+      }
+    }
+  }
+  .artists {
+    margin-bottom: 80px;
+    .artists__header {
+      height: 45px;
+      margin-bottom: 60px;
+      h1 {
+        @include fontHeader($sizeFontHeader * 2, $mFontColor, 400);
+      }
+    }
+    .artists__block {
+      figure {
+        margin: 0px 7px;
+      }
+      img {
+        max-width: 150px;
+        max-height: 150px;
+      }
+      figcaption {
+        @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
+        margin: 10px 0px 38px 0px;
+      }
+    }
+  }
+  .story {
+    max-width: 450px;
+    margin: 60px 0px;
+    .story__header {
+      @include fontHeader($sizeFontHeader, $mFontColor, 400);
+      margin-bottom: 32px;
+    }
+    .story__block {
+      max-height: 280px;
+      .story__menu {
+        max-width: 180px;
+        li {
+          @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
+          padding: 13px 67px 14px 14px;
+        }
+      }
+      .story__info {
+        padding: 28px;
+
+        .story__image {
+          display: none;
+        }
+        .story__info__text {
+          margin-left: 28px;
+          padding-top: 4px;
+          padding-right: 25px;
+          h1 {
+            @include fontBtnAndNav($sizeFontTitle, $additionColor, 400);
+            margin-bottom: 14px;
+            padding-left: 15px;
+          }
+          h3 {
+            @include fontText($sizeFontSmallText, $mFontColor, 400);
+          }
+        }
+      }
+    }
+  }
+  .roadmap {
+    .roadmap__title {
+      margin-bottom: 50px;
+      @include fontHeader($sizeFontHeader, $mFontColor, 400);
+    }
+    .roadmap__block {
+      .roadmap__header {
+        padding: 9px;
+        .roadmap__header__countbox {
+          width: 30px;
+          height: 30px;
+          @include fontBtnAndNav($sizeFontHeader / 1.5, $additionColor, 400);
+        }
+        .roadmap__header__title {
+          margin: 4px 0px 0px 11px;
+          h5 {
+            @include fontBtnAndNav($sizeFontVerySmallText, $additionColor, 400);
+          }
+          h3 {
+            @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
+          }
+        }
+      }
+      .roadmap__info {
+        max-width: 280px;
+        @include fontText($sizeFontVerySmallText, $mFontColor, 400);
+        padding: 15px 7px;
+        .roadmap__info__text {
+          max-width: 140px;
+          :nth-child(1) {
+            margin: 0px 0px 13px 13px;
+          }
+          a {
+            @include fontBtnAndNav($sizeFontVerySmallText, $additionColor, 400);
+          }
+        }
+        img {
+          max-width: 65px;
+          min-height: 65px;
+        }
+      }
+    }
+    .roadmap__divider {
+      height: 25px;
+      margin: 25px 0px;
+    }
+  }
+  .partners {
+    margin: 125px 0px;
+    .partners__title {
+      @include fontBtnAndNav($sizeFontSmallText, $additionColor, 400);
+      margin-bottom: 35px;
+    }
+    .partners__box {
+      @include fontHeader($sizeFontHeader / 1.3, $mFontColor, 400);
+      margin-right: -35px;
+      h3 {
+        margin: 0px 45px 45px 0px;
+      }
+    }
+  }
+  .faq {
+    max-width: 560px;
+    .faq__header {
+      max-width: 250px;
+      @include fontHeader($sizeFontHeader, $mFontColor, 400);
+      img {
+        max-width: 175px;
+        margin-top: 28px;
+      }
+    }
+    .faq__questions {
+      max-width: 280px;
+      .faq__list {
+        list-style-type: none;
+        li {
+          @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
+          padding: 12px 18px;
+        }
+        .faq__question__description {
+          @include fontText($sizeFontVerySmallText, $mFontColor, 400);
+          margin-top: 13px;
+        }
+      }
+    }
+  }
+  .team {
+    &__title {
+      margin: 45px 0px 65px 0px;
+      @include fontHeader($sizeFontHeader * 2, $mFontColor, 400);
+    }
+    &__container {
+      margin-right: -25px;
+      .team__person {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 25px;
+        img {
+          max-width: 160px;
+          max-height: 160px;
+        }
+        .team__person__name {
+          margin: 9px 0px;
+          @include fontBtnAndNav($sizeFontTitle, $mFontColor, 400);
+        }
+        .team__person__career {
+          margin-bottom: 9px;
+          @include fontBtnAndNav($sizeFontVerySmallText, $additionColor, 400);
+        }
+        .team__person__description {
+          max-width: 120px;
+          margin: 10px 0px;
+          text-align: center;
+          @include fontText($sizeFontVerySmallText, $mFontColor, 400);
+        }
+      }
+    }
+  }
+  .join {
+    margin: 123px 0px 70px 0px;
+    &__container {
+      max-width: 560px;
+    }
+    &__header {
+      max-width: 175px;
+      max-height: 175px;
+      .join__title {
+        @include fontHeader($sizeFontHeader, $mFontColor, 400);
+        margin: 15px 0px;
+      }
+      .join__subtitle {
+        margin-bottom: 15px;
+        @include fontText($sizeFontSmallText, $mFontColor, 400);
+      }
+      .join__btn {
+        @include fontBtnAndNav($sizeFontSmallText, $bgColor, 400);
+        padding: 4px 15px;
+        i {
+          margin-right: 4px;
+        }
+      }
+    }
+    &__imgwrap {
+      max-width: 280px;
+      max-height: 280px;
+    }
+  }
+  footer {
+    margin: 0px (-$mainPadding);
+    padding: 50px 20px;
+    .container {
+      max-width: 560px;
+      height: 70px;
+      ul {
+        > li {
+          margin-right: 10px;
+        }
+      }
+      .col1 {
+        @include fontHeader($sizeFontTitle, $mFontColor, 400);
+        sup {
+          @include fontHeader($sizeFontTitle / 2.5, $mFontColor, 400);
+        }
+        li:last-child {
+          @include fontBtnAndNav($sizeFontVerySmallText, $mFontColor, 400);
+        }
+      }
+      .col2,
+      .col3 {
+        @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
+      }
+      .col4 {
+        ul > li {
+          margin-bottom: 15px;
+        }
+        @include fontBtnAndNav($sizeFontVerySmallText, $mFontColor, 400);
+      }
+      .col5 > ul {
+        li {
+          margin-right: 7px;
         }
       }
     }
