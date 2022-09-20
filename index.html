@@ -30,9 +30,9 @@
       <nav class="header">
         <ul>
           <li class="logo">
-            <a>Meta<sup>RL</sup></a>
+            <a href="/">Meta<sup>RL</sup></a>
           </li>
-          <li><a href="/">Wave NFTs</a></li>
+          <li><a class="hover_text" href="/">Wave NFTs</a></li>
           <li><a href="/">Stories</a></li>
           <li><a href="/">Contact</a></li>
         </ul>
@@ -135,13 +135,13 @@
         <h1 class="story__header">MRL.<span>THE STORY.</span></h1>
         <div class="story__block">
           <div class="story__menu">
-            <ul>
-              <li>Our founders</li>
+            <ul class="story__list">
+              <li class="activate__story">Our founders</li>
               <li>Partners</li>
               <li>The future</li>
             </ul>
           </div>
-          <div class="story__info">
+          <div class="story__info ">
             <div class="story__image">
               <img src="img/story_photo.png" alt="No photo" />
             </div>
@@ -149,6 +149,44 @@
               <h1>
                 META record label was founded by Shaky Lake and Baky Hike in
                 2020 business accelerator.
+              </h1>
+              <h3>
+                Hac habitasse platea dictumst vestibulum rhoncus est. Sit amet
+                dictum sit amet justo. Tortor aliquam nulla facilisi cras.<br /><br />
+                Maecenas ultricies mi eget mauris pharetra. Sit amet consectetur
+                adipiscing elit ut aliquam purus. Porta nibh venenatis cras sed
+                felis. Aenean vel elit scelerisque mauris pellentesque pulvinar.
+                Et malesuada fames ac turpis egestas sed tempus. Enim sit amet
+                venenatis urna cursus eget.<br /><br />
+                Maecenas ultricies mi eget mauris pharetra et ultrices. A
+                condimentum vitae sapien pellentesque habitant morbi.<br /><br />
+              </h3>
+            </div>
+          </div>
+          <div class="story__info hide">
+            <div class="story__image">
+              <img src="img/roadmap1.png" alt="No photo" />
+            </div>
+            <div class="story__info__text">
+              <h1>
+                META record label was founded by Shaky Lake and Baky Hike in
+                2020 business accelerator.
+              </h1>
+              <h3>
+                Hac habitasse platea dictumst vestibulum rhoncus est. Sit amet
+                dictum sit amet justo. Tortor aliquam nulla facilisi cras.<br /><br />
+                Maecenas ultricies mi eget mauris pharetra et ultrices. A
+                condimentum vitae sapien pellentesque habitant morbi.<br /><br />
+              </h3>
+            </div>
+          </div>
+          <div class="story__info hide">
+            <div class="story__image">
+              <img src="img/roadmap2.png" alt="No photo" />
+            </div>
+            <div class="story__info__text">
+              <h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptate cum necessitatibus veritatis quam inventore! Commodi placeat minima saepe voluptate sapiente.
               </h1>
               <h3>
                 Hac habitasse platea dictumst vestibulum rhoncus est. Sit amet
@@ -245,22 +283,22 @@
           <img src="img/faq_image.png" alt="No photo">
         </div>
         <div class="faq__questions">
-          <ul class="faq__list">
+          <ul class="faq__list" id="faq">
             <li class="faq__question">
-              How can I get into Meta RL?
+              <div class="faq__question__header"><h3>How can I get into Meta RL?</h3><i class="fa-solid fa-chevron-down rotate180"></i></div>  
               <div class="faq__question__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est architecto totam ex animi beatae aliquid commodi dolores quaerat voluptatibus, iusto incidunt velit autem cumque quae ipsam nihil neque doloremque blanditiis.</div>
             </li>
-            <li class="faq__question">
-              When is the NFT launch?
-              <div class="faq__question__description"></div>
+            <li class="faq__question">             
+              <div class="faq__question__header"><h3>When is the NFT launch?</h3><i class="fa-solid fa-chevron-down"></i></div>  
+              <div class="faq__question__description hide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eius reiciendis vitae similique quis itaque sunt voluptatem iusto hic, rerum esse et, maiores laboriosam soluta! Ipsa, nobis. Optio, maiores adipisci.</div>
+            </li>
+            <li class="faq__question">              
+              <div class="faq__question__header"><h3>Where can I get a WAVE NFT?</h3><i class="fa-solid fa-chevron-down"></i></div>
+              <div class="faq__question__description hide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime rem facere quae fuga dolores dolor qui aperiam autem vero voluptates quisquam ea nam voluptatem est quos quasi mollitia, repudiandae labore!</div>
             </li>
             <li class="faq__question">
-              Where can I get a WAVE NFT?
-              <div class="faq__question__description"></div>
-            </li>
-            <li class="faq__question">
-              Can I hold META WAVE NFT as an investment?
-              <div class="faq__question__description"></div>
+              <div class="faq__question__header"><h3>Can I hold META WAVE NFT as an investment?</h3><i class="fa-solid fa-chevron-down"></i></div>  
+              <div class="faq__question__description hide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium delectus excepturi, voluptas animi quaerat maiores molestias, esse accusamus totam doloribus porro possimus quidem consectetur ipsam sed laboriosam eaque unde! Asperiores!</div>
             </li>
           </ul>
         </div>
@@ -335,17 +373,17 @@
     </main>
     <footer>
       <div class="container">
-          <div class="col1"><ul><li><a>Meta<sup>RL</sup></a></li>
+          <div class="col1"><ul><li><a href="/">Meta<sup>RL</sup></a></li>
           <li>2022 All rights reserved</li></ul></div>
           <div class="col2"><ul>
-            <li>Wave NFTs</li>
-            <li>Stories</li>
-            <li>Contact</li>
+            <li><a href="/">NFTs</a> </li>
+            <li><a href="/">Stories</a></li>
+            <li><a href="/">Contact</a></li>
           </ul></div>
           <div class="col3"><ul>
-            <li>Licencing</li>
-            <li>Style Guide</li>
-            <li>Changelog</li>
+            <li><a href="/">Licencing</a></li>
+            <li><a href="/">Style Guide</a></li>
+            <li><a href="/">Changelog</a></li>
           </ul></div>
           <div class="col4"><ul>
             <li>Powered by Webflow</li>
@@ -368,5 +406,7 @@
       </div>
       
     </footer>
+    <script src="scripts/faq.js"></script>
+    <script src="scripts/story.js"></script>
   </body>
 </html>

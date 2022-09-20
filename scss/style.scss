@@ -32,6 +32,9 @@ header {
         text-decoration: none;
         @include fontBtnAndNav($sizeFontSmallText, $mFontColor);
       }
+      a:hover {
+        color: $grayFontColor;
+      }
     }
 
     .logo a {
@@ -88,11 +91,15 @@ header {
   .landing__button {
     display: inline-block;
     background-color: $additionColor;
-    padding: 17px 50px 27px 50px;
     a {
+      display: inline-block;
       @include fontBtnAndNav($sizeFontSmallText, $bgColor, 400);
       text-decoration: none;
+      padding: 17px 50px 27px 50px;
     }
+  }
+  .landing__button:hover {
+    transform: scale(105%);
   }
   .landing__wrapimg {
     max-width: 870px;
@@ -134,11 +141,15 @@ header {
   .description-text-block-button {
     display: inline-block;
     border: 1px solid $additionColor;
-    padding: 10px 35px 16px 35px;
     a {
+      display: inline-block;
+      padding: 10px 35px 16px 35px;
       @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
       text-decoration: none;
     }
+  }
+  .description-text-block-button:hover {
+    transform: scale(105%);
   }
 }
 .artists {
@@ -171,7 +182,7 @@ header {
       margin: 20px 0px 80px 0px;
     }
   }
-}
+} /* running streak */
 .story {
   max-width: 1160px;
   max-height: 643px;
@@ -198,8 +209,7 @@ header {
         @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
         padding: 25px 135px 30px 30px;
       }
-      li:nth-of-type(1) {
-        color: $additionColor;
+      li:hover {
         background-color: $bgBlocksColor;
       }
     }
@@ -357,9 +367,19 @@ header {
     .faq__list {
       list-style-type: none;
       li {
-        @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
         padding: 24px 30px;
         background-color: $bgBlocksColor;
+      }
+      .faq__question__header {
+        display: flex;
+        justify-content: space-between;
+        h3 {
+          margin-right: 20px;
+          @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
+        }
+        i {
+          color: $mFontColor;
+        }
       }
       .faq__question__description {
         @include fontText($sizeFontVerySmallText, $mFontColor, 400);
@@ -436,6 +456,7 @@ header {
       @include fontText($sizeFontSmallText, $mFontColor, 400);
     }
     .join__btn {
+      display: inline-block;
       text-decoration: none;
       @include fontBtnAndNav($sizeFontSmallText, $bgColor, 400);
       padding: 8px 30px;
@@ -443,6 +464,9 @@ header {
       i {
         margin-right: 8px;
       }
+    }
+    .join__btn:hover {
+      transform: scale(105%);
     }
   }
   &__imgwrap {
@@ -473,11 +497,19 @@ footer {
       justify-content: space-between;
       > li {
         margin-right: 20px;
+        a {
+          text-decoration: none;
+        }
+        a:hover {
+          color: $grayFontColor;
+        }
       }
     }
     .col1 {
       display: flex;
-      @include fontHeader($sizeFontTitle, $mFontColor, 400);
+      a {
+        @include fontHeader($sizeFontTitle, $mFontColor, 400);
+      }
       sup {
         @include fontHeader($sizeFontTitle / 2.5, $mFontColor, 400);
       }
@@ -488,7 +520,9 @@ footer {
     .col2,
     .col3 {
       display: flex;
-      @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
+      a {
+        @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
+      }
     }
     .col4 {
       ul > li {
@@ -499,6 +533,9 @@ footer {
     .col5 > ul {
       li {
         margin-right: 12px;
+      }
+      li:hover {
+        background-color: $bdFooterColor;
       }
       flex-direction: row;
     }
@@ -536,7 +573,7 @@ footer {
         width: 30px;
         height: 30px;
         i {
-          height: 14px;
+          font-size: 14px;
         }
       }
     }
@@ -551,11 +588,10 @@ footer {
       margin-bottom: 80px;
     }
     .landing__button {
-      display: inline-block;
-      background-color: $additionColor;
-      padding: 12px 35px 19px 35px;
       a {
+        display: inline-block;
         @include fontBtnAndNav($sizeFontSmallText, $bgColor, 400);
+        padding: 12px 35px 19px 35px;
       }
     }
   }
@@ -723,8 +759,15 @@ footer {
       .faq__list {
         list-style-type: none;
         li {
-          @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
           padding: 17px 21px;
+        }
+        .faq__question__header {
+          h3 {
+            @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
+          }
+          i {
+            font-size: 13px;
+          }
         }
         .faq__question__description {
           @include fontText($sizeFontVerySmallText, $mFontColor, 400);
@@ -807,7 +850,9 @@ footer {
         }
       }
       .col1 {
-        @include fontHeader($sizeFontTitle, $mFontColor, 400);
+        a {
+          @include fontHeader($sizeFontTitle, $mFontColor, 400);
+        }
         sup {
           @include fontHeader($sizeFontTitle / 2.5, $mFontColor, 400);
         }
@@ -817,7 +862,9 @@ footer {
       }
       .col2,
       .col3 {
-        @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
+        a {
+          @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
+        }
       }
       .col4 {
         ul > li {
@@ -867,7 +914,7 @@ footer {
         width: 21px;
         height: 21px;
         i {
-          height: 5px;
+          font-size: 9px;
         }
       }
     }
@@ -882,10 +929,9 @@ footer {
       margin-bottom: 60px;
     }
     .landing__button {
-      display: inline-block;
-      background-color: $additionColor;
-      padding: 9px 25px 14px 25px;
       a {
+        display: inline-block;
+        padding: 9px 25px 14px 25px;
         @include fontBtnAndNav($sizeFontSmallText, $bgColor, 400);
       }
     }
@@ -1055,8 +1101,15 @@ footer {
       .faq__list {
         list-style-type: none;
         li {
-          @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
           padding: 12px 18px;
+        }
+        .faq__question__header {
+          h3 {
+            @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
+          }
+          i {
+            font-size: 9px;
+          }
         }
         .faq__question__description {
           @include fontText($sizeFontVerySmallText, $mFontColor, 400);
@@ -1139,7 +1192,9 @@ footer {
         }
       }
       .col1 {
-        @include fontHeader($sizeFontTitle, $mFontColor, 400);
+        a {
+          @include fontHeader($sizeFontTitle, $mFontColor, 400);
+        }
         sup {
           @include fontHeader($sizeFontTitle / 2.5, $mFontColor, 400);
         }
@@ -1149,7 +1204,9 @@ footer {
       }
       .col2,
       .col3 {
-        @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
+        a {
+          @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
+        }
       }
       .col4 {
         ul > li {
@@ -1164,4 +1221,14 @@ footer {
       }
     }
   }
+}
+.hide {
+  display: none !important;
+}
+.rotate180 {
+  transform: rotate(180deg);
+}
+.activate__story {
+  color: $additionColor !important;
+  background-color: $bgBlocksColor;
 }
