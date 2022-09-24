@@ -156,7 +156,7 @@ header {
   margin-bottom: 160px;
   .artists__header {
     height: 90px;
-    margin-left: -1000px;
+    margin-left: -600px;
     margin-bottom: 120px;
     display: flex;
     h3 {
@@ -184,7 +184,7 @@ header {
       margin: 20px 0px 80px 0px;
     }
   }
-} /* running streak */
+}
 .story {
   max-width: 1160px;
   max-height: 643px;
@@ -257,6 +257,7 @@ header {
   }
 }
 .roadmap {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -323,6 +324,49 @@ header {
     border: 1px solid $additionColor;
     margin: 50px 0px;
   }
+  /*   .roadmap__circles {
+    position: absolute;
+    margin-top: -150px;
+    z-index: -1;
+    left: 0;
+    .centr_radius {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+    }
+    .roadmap__circleblock {
+      margin-top: -120px;
+    }
+    .roadmap__circleone {
+      width: 670px;
+      height: 670px;
+      border: 1px solid $additionColorRgb25;
+    }
+    .roadmap__circletwo {
+      width: 415px;
+      height: 415px;
+      border: 1px solid $additionColorRgb50;
+    }
+    .roadmap__circlethree {
+      width: 260px;
+      height: 260px;
+      border: 1px solid $additionColorRgb75;
+    }
+    .roadmap__circlefour {
+      width: 160px;
+      height: 160px;
+      border: 1px solid $additionColor;
+    }
+    .roadmap__circlefive {
+      width: 100px;
+      height: 100px;
+      border: 1px solid $additionColor;
+    }
+    :nth-of-type(2){
+      margin-left: 100%;
+    }
+  } */
 }
 .partners {
   max-width: 1160px;
@@ -619,8 +663,8 @@ footer {
       }
     }
     .description-text-block-button {
-      padding: 7px 25px 12px 25px;
       a {
+        padding: 7px 25px 12px 25px;
         @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
       }
     }
@@ -630,8 +674,9 @@ footer {
     .artists__header {
       height: 65px;
       margin-bottom: 85px;
+      margin-left: -700px;
       h3 {
-        padding: 0px 700px;
+        padding: 0px 70px;
         @include fontHeader($sizeFontHeader * 2, $mFontColor, 400);
       }
     }
@@ -959,8 +1004,8 @@ footer {
       }
     }
     .description-text-block-button {
-      padding: 5px 18px 9px 18px;
       a {
+        padding: 5px 18px 9px 18px;
         @include fontBtnAndNav($sizeFontSmallText, $mFontColor, 400);
       }
     }
@@ -969,6 +1014,7 @@ footer {
     margin-bottom: 80px;
     .artists__header {
       height: 45px;
+      margin-left: -500px;
       margin-bottom: 60px;
       h3 {
         padding: 0px 50px;
@@ -1122,17 +1168,14 @@ footer {
   }
   .team {
     &__title {
-      margin: 45px 0px 65px 250px;
+      margin: 45px 0px 65px -250px;
       h3 {
         padding: 0px 50px;
         @include fontHeader($sizeFontHeader * 2, $mFontColor, 400);
       }
     }
     &__container {
-     
       .team__person {
-    
-
         img {
           max-width: 160px;
           max-height: 160px;

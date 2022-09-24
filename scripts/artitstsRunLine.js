@@ -14,6 +14,7 @@ let observerArtist = new IntersectionObserver((entries) => {
         newTitle.innerText = "ARTISTS";
         entry.target.prepend(newTitle);
       } else if (lastElem.getBoundingClientRect().x > window.innerWidth) {
+        console.log(window.innerWidth);
         lastElem.remove();
       }
     }
